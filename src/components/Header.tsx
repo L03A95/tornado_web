@@ -8,7 +8,7 @@ export default function Header () {
     return (
         <header className="header_wrapper">
             <img></img>
-            <nav>
+            <nav className="nav_wrapper">
                 <Link to='/' className="link">Home</Link>
                 <Link to='/menu' className="link">Menu</Link>
             </nav>
