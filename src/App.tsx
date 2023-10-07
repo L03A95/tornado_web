@@ -1,10 +1,18 @@
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import Menu from './components/Menu'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <>
-      <h1>TORNADO WEB</h1>
+    <Header/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/menu' element={<Menu/>}/>
+    </Routes>
     </>
   )
 }
