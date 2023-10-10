@@ -16,6 +16,21 @@ export default function Menu () {
                     <option value='cafeteria'>Cafeteria</option>
                     <option value='vinos'>Vinos</option>
                 </select>
+                <section>
+
+                </section>
+                <section>
+                    
+                </section>
+                <section>
+                    
+                </section>
+                <section>
+                    
+                </section>
+                <section>
+                    
+                </section>
             </div>
         </>
     )
