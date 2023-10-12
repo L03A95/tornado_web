@@ -8,3 +8,8 @@
     font-family: "Roboto";
     src: url('./assets/Roboto-Medium.ttf');
 }
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('./assets/Montserrat.ttf');
+}
