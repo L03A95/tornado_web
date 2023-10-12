@@ -1,15 +1,19 @@
 import '../styles/Menu.css'
 import MenuCard from './menuCard'
-import menus from './hardMenus.js'
+// import menus from './hardMenus.js'
 import {useState, useEffect} from 'react'
+import axios from 'axios'
 
 export default function Menu () {
 
     const [menu, setMenu] = useState([])
-
+    // const apiUrl = process.env.REACT_APP_API_URL
 
     useEffect(() => {
-        setMenu(menus)
+        // setMenu(menus)
+        axios.get('http://localhost:3001')
+        .then((res) => setMenu(res.data))
+        
     },[])
 
     return (
