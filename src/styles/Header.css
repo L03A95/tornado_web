@@ -7,7 +7,8 @@
 }
 
 .link {
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
+    font-weight: 600;
     text-decoration: none;
     color: #fcc;
     margin-left: 20px;
