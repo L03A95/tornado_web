@@ -57,9 +57,9 @@ export default function Menu () {
                 </section>
 
                 <section className='section_wrapper'>
-                    <span className='section_title'>Vinos</span>
+                    <span className='section_title'>Bebidas</span>
                     {menu.map((m : any) => {
-                        if(m.category == 'vinos') {
+                        if(m.category == 'bebidas') {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
