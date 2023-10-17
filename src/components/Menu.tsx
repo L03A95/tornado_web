@@ -11,7 +11,7 @@ export default function Menu () {
 
     useEffect(() => {
         // setMenu(menus)
-        axios.get('http://localhost:3001')
+        axios.get('https://tornado-api.vercel.app/')
         .then((res) => setMenu(res.data))
         
     },[])
