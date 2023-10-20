@@ -43,3 +43,25 @@
     height: 80px;
     object-fit: cover;
 }
+
+.card_name_loading {
+    width: 150px;
+    height: 20px;
+    background-color: #aaa;
+    border-radius: 3px;
+}
+
+.card_description_loading {
+    width: 180px;
+    height: 20px;
+    background-color: #aaa;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.card_price_loading {
+    width: 70px;
+    height: 20px;
+    background-color: #aaa;
+    border-radius: 3px;
+}

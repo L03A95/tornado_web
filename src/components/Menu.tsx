@@ -1,20 +1,19 @@
 import '../styles/Menu.css'
 import MenuCard from './menuCard'
-// import menus from './hardMenus.js'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
 export default function Menu () {
 
     const [menu, setMenu] = useState([])
-    // const apiUrl = process.env.REACT_APP_API_URL
+    const [apiInfo, setApiInfo] = useState(false)
 
     useEffect(() => {
-        // setMenu(menus)
         axios.get('https://tornado-api.vercel.app/')
-        .then((res) => setMenu(res.data))
-        
+        .then((res) => {setMenu(res.data); setApiInfo(true)})
+        .catch((err) => console.log(err))
     },[])
+    
 
     return (
         <>
@@ -27,6 +26,11 @@ export default function Menu () {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
+                    {apiInfo ? null 
+                    : <><MenuCard name='cargando' description='' image='' price={0}/> 
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                    </>}
                 </section>
 
                 <section className='section_wrapper'>
@@ -36,6 +40,11 @@ export default function Menu () {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
+                    {apiInfo ? null 
+                    : <><MenuCard name='cargando' description='' image='' price={0}/> 
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                    </>}
                 </section>
 
                 <section className='section_wrapper'>
@@ -45,6 +54,11 @@ export default function Menu () {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
+                    {apiInfo ? null 
+                    : <><MenuCard name='cargando' description='' image='' price={0}/> 
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                    </>}
                 </section>
 
                 <section className='section_wrapper'>
@@ -54,6 +68,11 @@ export default function Menu () {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
+                    {apiInfo ? null 
+                    : <><MenuCard name='cargando' description='' image='' price={0}/> 
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                    </>}
                 </section>
 
                 <section className='section_wrapper'>
@@ -63,6 +82,11 @@ export default function Menu () {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
+                    {apiInfo ? null 
+                    : <><MenuCard name='cargando' description='' image='' price={0}/> 
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                        <MenuCard name='cargando' description='' image='' price={0}/>
+                    </>}
                 </section>
             </div>
         </>

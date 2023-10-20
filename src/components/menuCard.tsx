@@ -10,7 +10,26 @@ type menuProps = {
 
 export default function MenuCard({name, description, image, price } : menuProps): JSX.Element {
 
-    return (
+    if (name == "cargando") {
+        return (
+        <div className='card_wrapper'>
+            <div className='text_container'>
+                <span className='card_name_loading'></span>
+                <div>
+                    <p className='card_description_loading'></p>
+                    <p className='card_description_loading'></p>
+                    <p className='card_description_loading'></p>
+                </div>
+
+                
+                <span className='card_price_loading'></span>
+            </div>
+            <img src={image ? image : menu_blank} className='card_img'/>
+        </div>
+        )}
+
+    else {
+        return (
         <div className='card_wrapper'>
             <div className='text_container'>
                 <span className='card_name'>{name}</span>
@@ -19,5 +38,5 @@ export default function MenuCard({name, description, image, price } : menuProps)
             </div>
             <img src={image ? image : menu_blank} className='card_img'/>
         </div>
-    )
+    )}
 }
