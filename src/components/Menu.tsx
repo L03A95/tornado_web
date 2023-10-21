@@ -22,7 +22,7 @@ export default function Menu () {
                 <section className='section_wrapper'>
                     <span className='section_title'>Entrada</span>
                     {menu.map((m : any) => {
-                        if(m.category == 'entrada') {
+                        if(m.category == 'entrada' && m.active) {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
@@ -36,7 +36,7 @@ export default function Menu () {
                 <section className='section_wrapper'>
                     <span className='section_title'>Parrilla</span>
                     {menu.map((m : any) => {
-                        if(m.category == 'parrilla') {
+                        if(m.category == 'parrilla' && m.active) {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
@@ -50,7 +50,7 @@ export default function Menu () {
                 <section className='section_wrapper'>
                     <span className='section_title'>Dulces</span>
                     {menu.map((m : any) => {
-                        if(m.category == 'dulces') {
+                        if(m.category == 'dulces' && m.active) {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
@@ -64,7 +64,7 @@ export default function Menu () {
                 <section className='section_wrapper'>
                     <span className='section_title'>Cafetería</span>
                     {menu.map((m : any) => {
-                        if(m.category == 'cafeteria') {
+                        if(m.category == 'cafeteria' && m.active) {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
@@ -78,7 +78,7 @@ export default function Menu () {
                 <section className='section_wrapper'>
                     <span className='section_title'>Bebidas</span>
                     {menu.map((m : any) => {
-                        if(m.category == 'bebidas') {
+                        if(m.category == 'bebidas' && m.active) {
                             return <MenuCard name={m.name} description={m.description} image={m.image} price={m.price} />
                         }
                     })}
